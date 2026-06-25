@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment am Stadtpark – Wiener Neustadt | Kurz- & Langzeitaufenthalte</title>
+  <meta name="description" content="Voll ausgestattetes Apartment am Stadtpark in Wiener Neustadt. Privatvermietung für Kurz- und Langzeitaufenthalte. Lift vorhanden. Jetzt buchen auf Airbnb.">
+  <meta name="keywords" content="Apartment Wiener Neustadt, Stadtpark, Kurzzeitaufenthalt, Langzeitaufenthalt, Privatvermietung, voll ausgestattet, Lift, Airbnb">
+  <meta property="og:title" content="Apartment am Stadtpark – Wiener Neustadt">
+  <meta property="og:description" content="Voll ausgestattetes Apartment am Stadtpark. Kurz- & Langzeitaufenthalte. Jetzt entdecken.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --cream-warm: #F7F1E8;
+      --terracotta: #C27A56;
+      --terracotta-dark: #A86543;
+      --terracotta-light: rgba(194, 122, 86, 0.12);
+      --brown: #7B5E3B;
+      --brown-dark: #3C2E20;
+      --brown-mid: #5C4A35;
+      --khaki: #C4B99A;
+      --khaki-light: rgba(196, 185, 154, 0.3);
+      --sage: #9CB08A;
+      --sage-dark: #7D9470;
+      --sage-light: rgba(156, 176, 138, 0.15);
+      --text: #3C2E20;
+      --text-muted: #8B7D6B;
+      --text-inverse: #FDFAF7;
+      --border: rgba(124, 110, 90, 0.2);
+      --shadow-sm: 0 1px 3px rgba(60, 46, 32, 0.06);
+      --shadow-md: 0 4px 20px rgba(60, 46, 32, 0.08);
+      --shadow-lg: 0 12px 40px rgba(60, 46, 32, 0.12);
+      --radius-sm: 6px;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --font-display: 'Georgia', 'Times New Roman', serif;
+      --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250, 246, 240, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      transition: all 0.3s;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.15rem; color: var(--brown-dark);
+      letter-spacing: -0.3px;
+    }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-muted);
+      font-size: 0.9rem; font-weight: 450;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--terracotta); }
+    .lang-toggle {
+      background: var(--terracotta-light);
+      border: 1px solid var(--terracotta);
+      color: var(--terracotta-dark);
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .lang-toggle:hover {
+      background: var(--terracotta);
+      color: var(--text-inverse);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 120px 24px 80px;
+      background: linear-gradient(170deg, var(--cream-warm) 0%, var(--cream) 40%, var(--sage-light) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--khaki-light) 0%, transparent 70%);
+      top: -100px; right: -100px;
+    }
+    .hero::after {
+      content: ''; position: absolute;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, var(--terracotta-light) 0%, transparent 70%);
+      bottom: -50px; left: -50px;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--terracotta-light);
+      border: 1px solid rgba(194, 122, 86, 0.25);
+      color: var(--terracotta-dark);
+      font-size: 0.8rem; font-weight: 600;
+      padding: 6px 16px; border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--brown-dark);
+      line-height: 1.2; margin-bottom: 20px;
+      letter-spacing: -0.8px;
+    }
+    .hero h1 span { color: var(--terracotta); }
+    .hero-subtitle {
+      font-size: 1.15rem; color: var(--text-muted);
+      max-width: 480px; margin: 0 auto 36px;
+      font-weight: 400;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center; margin-bottom: 44px;
+    }
+    .hero-tag {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 10px 20px; border-radius: 28px;
+      font-size: 0.85rem; color: var(--brown-mid);
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-tag .icon { margin-right: 6px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 32px; border-radius: 32px;
+      font-size: 1rem; font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer; border: none;
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--text-inverse);
+      box-shadow: 0 4px 18px rgba(194, 122, 86, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--terracotta-dark);
+      box-shadow: 0 6px 24px rgba(194, 122, 86, 0.45);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--terracotta);
+      color: var(--terracotta-dark);
+    }
+    .btn-outline:hover {
+      background: var(--terracotta-light);
+    }
+
+    /* ── Sections ── */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--brown-dark);
+      line-height: 1.25; margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .section-desc {
+      color: var(--text-muted); font-size: 1.05rem;
+      max-width: 560px; margin-bottom: 40px; line-height: 1.7;
+    }
+
+    /* ── Gallery ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .gallery-item {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius);
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.35s;
+      background: var(--khaki-light);
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(60,46,32,0.15) 0%, transparent 40%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none; position: fixed;
+      inset: 0; z-index: 200;
+      background: rgba(30, 22, 16, 0.94);
+      backdrop-filter: blur(10px);
+      align-items: center; justify-content: center;
+      padding: 40px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 92vw; max-height: 85vh;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 28px;
+      background: rgba(255,255,255,0.15);
+      border: none; color: white;
+      font-size: 2rem; width: 44px; height: 44px;
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+    .lightbox-nav {
+      position: absolute; background: rgba(255,255,255,0.15);
+      border: none; color: white; font-size: 1.4rem;
+      width: 44px; height: 44px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+      top: 50%; transform: translateY(-50%);
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 2rem; margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem; color: var(--brown-dark);
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: var(--text-muted); font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ── Location ── */
+    .location-block {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .location-map {
+      background: var(--sage-light);
+      border-radius: var(--radius-lg);
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+      border: 1px solid var(--border);
+    }
+    .location-list {
+      list-style: none; display: flex; flex-direction: column; gap: 16px;
+    }
+    .location-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      color: var(--text); font-size: 0.95rem;
+    }
+    .location-list li .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sage); flex-shrink: 0; margin-top: 8px;
+    }
+
+    /* ── Airbnb CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--brown-mid) 0%, var(--brown-dark) 100%);
+      color: var(--text-inverse);
+      text-align: center;
+      padding: 80px 24px;
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(194, 122, 86, 0.2) 0%, transparent 70%);
+      top: -50%; right: -10%;
+    }
+    .cta-section .section-inner { position: relative; z-index: 1; }
+    .cta-section .section-title { color: var(--text-inverse); }
+    .cta-section .section-desc {
+      color: rgba(253, 250, 247, 0.75);
+      margin: 0 auto 36px;
+    }
+    .cta-section .btn-primary {
+      background: var(--terracotta);
+      font-size: 1.05rem; padding: 16px 36px;
+    }
+    .cta-section .btn-primary:hover {
+      background: var(--terracotta-dark);
+    }
+    .airbnb-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.12);
+      padding: 8px 18px; border-radius: 24px;
+      font-size: 0.85rem; margin-bottom: 28px;
+    }
+    .airbnb-badge svg { width: 20px; height: 20px; fill: white; }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .contact-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+    .contact-card:hover { box-shadow: var(--shadow-md); }
+    .contact-card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .contact-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem; color: var(--brown-dark);
+      margin-bottom: 8px;
+    }
+    .contact-card a, .contact-card span {
+      color: var(--terracotta-dark); text-decoration: none;
+      font-size: 0.95rem; font-weight: 500;
+      word-break: break-all;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center; padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted); font-size: 0.85rem;
+    }
+
+    /* ── Animation ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.25s; }
+    .delay-3 { animation-delay: 0.4s; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .nav-links { gap: 16px; }
+      .nav-links a:not(.lang-toggle) { display: none; }
+      .location-block { grid-template-columns: 1fr; gap: 28px; }
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+      .lightbox-nav { width: 36px; height: 36px; }
+      .lightbox-prev { left: 12px; }
+      .lightbox-next { right: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">Apartment am Stadtpark</div>
+      <div class="nav-links">
+        <a href="#gallery" data-de="Galerie" data-en="Gallery">Galerie</a>
+        <a href="#features" data-de="Ausstattung" data-en="Features">Ausstattung</a>
+        <a href="#location" data-de="Lage" data-en="Location">Lage</a>
+        <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+        <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge animate-in" data-de="Privatvermietung in Wiener Neustadt" data-en="Private rental in Wiener Neustadt">Privatvermietung in Wiener Neustadt</div>
+      <h1 class="animate-in delay-1" data-de="Apartment am <span>Stadtpark</span>" data-en="Apartment at the <span>Stadtpark</span>">Apartment am <span>Stadtpark</span></h1>
+      <p class="hero-subtitle animate-in delay-2" data-de="Ihr Zuhause auf Zeit – voll ausgestattet, ruhig gelegen direkt am grünen Stadtpark. Perfekt für Kurz- und Langzeitaufenthalte." data-en="Your home away from home – fully equipped, quietly located right at the green Stadtpark. Perfect for short and long-term stays.">Ihr Zuhause auf Zeit – voll ausgestattet, ruhig gelegen direkt am grünen Stadtpark. Perfekt für Kurz- und Langzeitaufenthalte.</p>
+      <div class="hero-tags animate-in delay-3">
+        <span class="hero-tag"><span class="icon">🛗</span> <span data-de="Lift vorhanden" data-en="Elevator">Lift vorhanden</span></span>
+        <span class="hero-tag"><span class="icon">🍳</span> <span data-de="Voll ausgestattet" data-en="Fully equipped">Voll ausgestattet</span></span>
+        <span class="hero-tag"><span class="icon">📅</span> <span data-de="Kurz- & Langzeit" data-en="Short & long stays">Kurz- & Langzeit</span></span>
+        <span class="hero-tag"><span class="icon">🌳</span> <span data-de="Am Stadtpark" data-en="By the park">Am Stadtpark</span></span>
+      </div>
+      <a href="#gallery" class="btn btn-primary animate-in delay-3" data-de="Apartment entdecken" data-en="Discover the apartment">Apartment entdecken</a>
+    </div>
+  </section>
+
+  <!-- ── Gallery ── -->
+  <section id="gallery">
+    <div class="section-inner">
+      <div class="section-label" data-de="Impressionen" data-en="Impressions">Impressionen</div>
+      <h2 class="section-title" data-de="Ein Blick ins Apartment" data-en="A look inside">Ein Blick ins Apartment</h2>
+      <p class="section-desc" data-de="Helle, modern eingerichtete Räume mit Wohlfühlatmosphäre. Entdecken Sie Küche, Wohnbereich, Schlafzimmer und den Ausblick." data-en="Bright, modern rooms with a cozy atmosphere. Discover the kitchen, living area, bedroom and the view.">Helle, modern eingerichtete Räume mit Wohlfühlatmosphäre. Entdecken Sie Küche, Wohnbereich, Schlafzimmer und den Ausblick.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(0)"><img src="images/01.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(1)"><img src="images/02.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(2)"><img src="images/03.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(3)"><img src="images/04.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(4)"><img src="images/05.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(5)"><img src="images/06.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(6)"><img src="images/07.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(7)"><img src="images/08.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(8)"><img src="images/09.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(9)"><img src="images/10.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(10)"><img src="images/11.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(11)"><img src="images/12.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(12)"><img src="images/13.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(13)"><img src="images/14.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(14)"><img src="images/15.jpg" alt="Apartment" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(15)"><img src="images/16.jpg" alt="Apartment" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section id="features" style="background:var(--cream-warm)">
+    <div class="section-inner">
+      <div class="section-label" data-de="Ausstattung" data-en="Amenities">Ausstattung</div>
+      <h2 class="section-title" data-de="Alles, was Sie brauchen" data-en="Everything you need">Alles, was Sie brauchen</h2>
+      <p class="section-desc" data-de="Das Apartment lässt keine Wünsche offen – durchdacht eingerichtet für einen komfortablen Aufenthalt." data-en="The apartment leaves nothing to be desired – thoughtfully furnished for a comfortable stay.">Das Apartment lässt keine Wünsche offen – durchdacht eingerichtet für einen komfortablen Aufenthalt.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🛏️</div>
+          <h3 data-de="Schlafzimmer" data-en="Bedroom">Schlafzimmer</h3>
+          <p data-de="Bequemes Bett mit hochwertiger Bettwäsche, Verdunkelungsmöglichkeit und ausreichend Stauraum." data-en="Comfortable bed with quality linens, blackout option and ample storage.">Bequemes Bett mit hochwertiger Bettwäsche, Verdunkelungsmöglichkeit und ausreichend Stauraum.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍳</div>
+          <h3 data-de="Voll ausgestattete Küche" data-en="Fully equipped kitchen">Voll ausgestattete Küche</h3>
+          <p data-de="Herd, Backofen, Kühlschrank, Kaffeemaschine, Wasserkocher, Töpfe und Geschirr – alles da." data-en="Stove, oven, fridge, coffee machine, kettle, pots and dishes – everything you need.">Herd, Backofen, Kühlschrank, Kaffeemaschine, Wasserkocher, Töpfe und Geschirr – alles da.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📺</div>
+          <h3 data-de="Wohnbereich" data-en="Living area">Wohnbereich</h3>
+          <p data-de="Gemütliche Couch, Smart-TV und WLAN für entspannte Abende." data-en="Cozy couch, smart TV and WiFi for relaxing evenings.">Gemütliche Couch, Smart-TV und WLAN für entspannte Abende.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚿</div>
+          <h3 data-de="Modernes Bad" data-en="Modern bathroom">Modernes Bad</h3>
+          <p data-de="Dusche, Waschmaschine, Handtücher und Pflegeprodukte sind inklusive." data-en="Shower, washing machine, towels and toiletries included.">Dusche, Waschmaschine, Handtücher und Pflegeprodukte sind inklusive.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛗</div>
+          <h3 data-de="Lift" data-en="Elevator">Lift</h3>
+          <p data-de="Barrierefreier Zugang mit Lift – kein Treppensteigen mit Gepäck." data-en="Barrier-free access with elevator – no stairs with luggage.">Barrierefreier Zugang mit Lift – kein Treppensteigen mit Gepäck.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌳</div>
+          <h3 data-de="Stadtpark vor der Tür" data-en="Stadtpark at your doorstep">Stadtpark vor der Tür</h3>
+          <p data-de="Direkte Lage am Stadtpark – perfekt für Spaziergänge, Joggen oder einen Kaffee im Grünen." data-en="Directly at the Stadtpark – perfect for walks, jogging or a coffee in the green.">Direkte Lage am Stadtpark – perfekt für Spaziergänge, Joggen oder einen Kaffee im Grünen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔑</div>
+          <h3 data-de="Privatvermietung" data-en="Private rental">Privatvermietung</h3>
+          <p data-de="Persönliche Betreuung, kein anonymer Massentourismus. Bei Fragen sind wir direkt für Sie da." data-en="Personal care, no anonymous mass tourism. We are directly available for any questions.">Persönliche Betreuung, kein anonymer Massentourismus. Bei Fragen sind wir direkt für Sie da.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3 data-de="Zentrale Lage" data-en="Central location">Zentrale Lage</h3>
+          <p data-de="Wenige Minuten zu Fuß ins Zentrum von Wiener Neustadt, zu Geschäften, Restaurants und öffentlichen Verkehrsmitteln." data-en="A few minutes' walk to the center of Wiener Neustadt, shops, restaurants and public transport.">Wenige Minuten zu Fuß ins Zentrum von Wiener Neustadt, zu Geschäften, Restaurants und öffentlichen Verkehrsmitteln.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Location ── -->
+  <section id="location">
+    <div class="section-inner">
+      <div class="section-label" data-de="Lage" data-en="Location">Lage</div>
+      <h2 class="section-title" data-de="Am Stadtpark, mitten im Grünen" data-en="At the Stadtpark, surrounded by green">Am Stadtpark, mitten im Grünen</h2>
+      <p class="section-desc" data-de="Ruhe und Natur direkt vor der Haustür, und doch nur wenige Minuten vom Zentrum Wiener Neustadts entfernt." data-en="Peace and nature right at your doorstep, yet only a few minutes from the center of Wiener Neustadt.">Ruhe und Natur direkt vor der Haustür, und doch nur wenige Minuten vom Zentrum Wiener Neustadts entfernt.</p>
+      <div class="location-block">
+        <div class="location-map" aria-label="Kartenausschnitt Wiener Neustadt Stadtpark">
+          <div style="text-align:center">
+            🌳<br>
+            <span style="font-family:var(--font-body);font-size:0.85rem;color:var(--brown-mid);display:block;margin-top:12px" data-de="Stadtpark · Wiener Neustadt" data-en="Stadtpark · Wiener Neustadt">Stadtpark · Wiener Neustadt</span>
+          </div>
+        </div>
+        <ul class="location-list">
+          <li><span class="dot"></span> <span data-de="Direkt am Stadtpark gelegen – Blick ins Grüne" data-en="Directly at the Stadtpark – green view">Direkt am Stadtpark gelegen – Blick ins Grüne</span></li>
+          <li><span class="dot"></span> <span data-de="5 Min zu Fuß ins Stadtzentrum" data-en="5 min walk to the city center">5 Min zu Fuß ins Stadtzentrum</span></li>
+          <li><span class="dot"></span> <span data-de="Restaurants, Cafés & Supermärkte in Gehweite" data-en="Restaurants, cafés & supermarkets within walking distance">Restaurants, Cafés & Supermärkte in Gehweite</span></li>
+          <li><span class="dot"></span> <span data-de="Bahnhof Wiener Neustadt in 10 Min erreichbar" data-en="Wiener Neustadt station reachable in 10 min">Bahnhof Wiener Neustadt in 10 Min erreichbar</span></li>
+          <li><span class="dot"></span> <span data-de="Wien in 30 Min mit dem Zug" data-en="Vienna in 30 min by train">Wien in 30 Min mit dem Zug</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Airbnb CTA ── -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <div class="airbnb-badge">
+        <svg viewBox="0 0 24 24"><path d="M16.24 7.76C15.07 6.59 13.54 6 12 6v6l-4.24 4.24c-2.34-2.34-2.34-6.14 0-8.48 2.34-2.34 6.14-2.34 8.48 0 2.34 2.34 2.34 6.14 0 8.48-.47.47-1.03.84-1.63 1.09l1.56 1.56c.86-.48 1.63-1.1 2.3-1.77 3.51-3.51 3.51-9.21 0-12.72s-9.21-3.51-12.72 0-3.51 9.21 0 12.72l.03.03L12 21.18l4.24-4.24c.47-.47.84-1.03 1.09-1.63l-1.09-1.55z"/></svg>
+        <span data-de="Auf Airbnb buchbar" data-en="Bookable on Airbnb">Auf Airbnb buchbar</span>
+      </div>
+      <h2 class="section-title" data-de="Bereit für Ihren Aufenthalt?" data-en="Ready for your stay?">Bereit für Ihren Aufenthalt?</h2>
+      <p class="section-desc" data-de="Buchen Sie direkt auf Airbnb – mit Kalender, Bewertungen und sicherem Zahlungssystem." data-en="Book directly on Airbnb – with calendar, reviews and secure payment system.">Buchen Sie direkt auf Airbnb – mit Kalender, Bewertungen und sicherem Zahlungssystem.</p>
+      <a href="https://www.airbnb.de/rooms/747033527564247099?unique_share_id=91b5873c-32eb-4f46-a566-70ed417e72cd&viralityEntryPoint=1&s=76" target="_blank" rel="noopener" class="btn btn-primary" data-de="Auf Airbnb ansehen & buchen" data-en="View & Book on Airbnb">Auf Airbnb ansehen & buchen</a>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact" style="background:var(--cream-warm)">
+    <div class="section-inner">
+      <div class="section-label" data-de="Kontakt" data-en="Contact">Kontakt</div>
+      <h2 class="section-title" data-de="Wir sind für Sie da" data-en="We're here for you">Wir sind für Sie da</h2>
+      <p class="section-desc" data-de="Haben Sie Fragen zum Apartment oder zur Buchung? Melden Sie sich gerne direkt bei uns." data-en="Questions about the apartment or booking? Feel free to contact us directly.">Haben Sie Fragen zum Apartment oder zur Buchung? Melden Sie sich gerne direkt bei uns.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📧</div>
+          <h3>Email</h3>
+          <a href="mailto:apartment-wrneustadt@outlook.com">apartment-wrneustadt@outlook.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <h3 data-de="Telefon" data-en="Phone">Telefon</h3>
+          <a href="tel:+436763934164">+43 676 3934164</a>
+        </div>
+        <div class="contact-card">
+          <div class="icon">🏠</div>
+          <h3>Airbnb</h3>
+          <a href="https://www.airbnb.de/rooms/747033527564247099?unique_share_id=91b5873c-32eb-4f46-a566-70ed417e72cd&viralityEntryPoint=1&s=76" target="_blank" rel="noopener" data-de="Zum Inserat" data-en="View listing">Zum Inserat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <p>&copy; 2025 Apartment am Stadtpark · Wiener Neustadt · Privatvermietung</p>
+  </footer>
+
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Schließen">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navLightbox(-1)" aria-label="Vorheriges Bild">←</button>
+    <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navLightbox(1)" aria-label="Nächstes Bild">→</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script>
+    // ── Language Toggle ──
+    let currentLang = 'de';
+    const toggleBtn = document.getElementById('langToggle');
+
+    function toggleLang() {
+      currentLang = currentLang === 'de' ? 'en' : 'de';
+      toggleBtn.textContent = currentLang === 'de' ? 'EN' : 'DE';
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll('[data-de][data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + currentLang);
+      });
+      localStorage.setItem('apt-lang', currentLang);
+    }
+
+    // Load saved lang
+    const savedLang = localStorage.getItem('apt-lang');
+    if (savedLang === 'en') toggleLang();
+
+    // ── Lightbox ──
+    const galleryImages = [
+      'images/01.jpg', 'images/02.jpg', 'images/03.jpg', 'images/04.jpg',
+      'images/05.jpg', 'images/06.jpg', 'images/07.jpg', 'images/08.jpg',
+      'images/09.jpg', 'images/10.jpg', 'images/11.jpg', 'images/12.jpg',
+      'images/13.jpg', 'images/14.jpg', 'images/15.jpg', 'images/16.jpg'
+    ];
+    let currentImg = 0;
+
+    function openLightbox(index) {
+      currentImg = index;
+      document.getElementById('lightboxImg').src = galleryImages[index];
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox')) return;
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function navLightbox(dir) {
+      currentImg = (currentImg + dir + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightboxImg').src = galleryImages[currentImg];
+    }
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') { closeLightbox(); }
+      if (e.key === 'ArrowLeft') { navLightbox(-1); }
+      if (e.key === 'ArrowRight') { navLightbox(1); }
+    });
+
+    // ── Scroll Animation ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .contact-card, .gallery-item, .section-title, .section-desc')
+      .forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
